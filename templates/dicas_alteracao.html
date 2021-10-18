@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dicas de Economia de Energia - Alteração</h1>
+    </div>
+
+    <form method="POST">
+
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" name="titulo" class="form-control" value="{{request.form['titulo'] or dica['titulo'] }}">
+        </div>
+
+        <div class="form-group">
+            <label for="conteudo">Conteúdo</label>
+            <textarea name="conteudo1" class="form-control">{{request.form['conteudo1'] or dica['conteudo1']}}</textarea>
+            <textarea name="conteudo2" class="form-control">{{request.form['conteudo2'] or dica['conteudo2']}}</textarea>
+            <textarea name="conteudo3" class="form-control">{{request.form['conteudo3'] or dica['conteudo3']}}</textarea>
+            <textarea name="conteudo4" class="form-control">{{request.form['conteudo4'] or dica['conteudo4']}}</textarea>
+            <textarea name="conteudo5" class="form-control">{{request.form['conteudo5'] or dica['conteudo5']}}</textarea>
+            <textarea name="conteudo6" class="form-control">{{request.form['conteudo6'] or dica['conteudo6']}}</textarea>
+            <textarea name="conteudo7" class="form-control">{{request.form['conteudo7'] or dica['conteudo7']}}</textarea>
+            <textarea name="conteudo8" class="form-control">{{request.form['conteudo8'] or dica['conteudo8']}}</textarea>
+            <textarea name="conteudo9" class="form-control">{{request.form['conteudo9'] or dica['conteudo9']}}</textarea>
+            <textarea name="conteudo10" class="form-control">{{request.form['conteudo10'] or dica['conteudo10']}}</textarea>
+            <textarea name="conteudo11" class="form-control">{{request.form['conteudo11'] or dica['conteudo11']}}</textarea>
+            <textarea name="conteudo12" class="form-control">{{request.form['conteudo12'] or dica['conteudo12']}}</textarea>
+            <textarea name="conteudo13" class="form-control">{{request.form['conteudo13'] or dica['conteudo13']}}</textarea>
+            <textarea name="conteudo14" class="form-control">{{request.form['conteudo14'] or dica['conteudo14']}}</textarea>
+            <textarea name="conteudo15" class="form-control">{{request.form['conteudo15'] or dica['conteudo15']}}</textarea>
+            <textarea name="conteudo16" class="form-control">{{request.form['conteudo16'] or dica['conteudo16']}}</textarea>
+            <textarea name="conteudo17" class="form-control">{{request.form['conteudo17'] or dica['conteudo17']}}</textarea>
+            <textarea name="conteudo18" class="form-control">{{request.form['conteudo18'] or dica['conteudo18']}}</textarea>
+            <textarea name="conteudo19" class="form-control">{{request.form['conteudo19'] or dica['conteudo19']}}</textarea>
+            <textarea name="conteudo20" class="form-control">{{request.form['conteudo20'] or dica['conteudo20']}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="fonte">Fonte</label>
+            <input type="text" name="fonte" class="form-control" value="{{request.form['fonte'] or dica['fonte'] }}">
+        </div>
+
+        <div class="form-group">
+            <label for="fontelink">Link da Fonte</label>
+            <input type="text" name="fontelink" class="form-control" value="{{request.form['fontelink'] or dica['fontelink'] }}">
+        </div>
+
+        <div class="form-group">
+            <label for="imagem">Imagem</label>
+            <input type="text" name="imagem" class="form-control" value="{{request.form['imagem'] or dica['imagem'] }}">
+        </div>
+
+        <div class="form-group">
+            <button class='mt-2 btn btn-primary' type='submit' value='Alterar'>Alterar</button>
+        </div>
+
+    </form>
+
+    <hr>
+
+    <form action="{{ url_for('dicas_exclusao', id=dica['id']) }}" method="POST">
+
+        <input type="submit" value="Apagar" class='mt-2 btn btn-danger' onclick="return confirm('Tem certeza de que deseja apagar esta postagem?')">
+
+    </form>
+
+{% endblock %}

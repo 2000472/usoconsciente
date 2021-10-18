@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dicas de Economia de Energia - Inclusão</h1>
+    </div>
+
+    <form method="POST">
+
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" class="form-control" value="{{request.form['titulo']}}">
+    </div>
+
+    <div class="form-group">
+        <label for="titulo">Conteúdo</label>
+        <input type="text" name="conteudo1" class="form-control" value="{{request.form['conteudo1']}}">
+        <input type="text" name="conteudo2" class="form-control" value="{{request.form['conteudo2']}}">
+        <input type="text" name="conteudo3" class="form-control" value="{{request.form['conteudo3']}}">
+        <input type="text" name="conteudo4" class="form-control" value="{{request.form['conteudo4']}}">
+        <input type="text" name="conteudo5" class="form-control" value="{{request.form['conteudo5']}}">
+        <input type="text" name="conteudo6" class="form-control" value="{{request.form['conteudo6']}}">
+        <input type="text" name="conteudo7" class="form-control" value="{{request.form['conteudo7']}}">
+        <input type="text" name="conteudo8" class="form-control" value="{{request.form['conteudo8']}}">
+        <input type="text" name="conteudo9" class="form-control" value="{{request.form['conteudo9']}}">
+        <input type="text" name="conteudo10" class="form-control" value="{{request.form['conteudo10']}}">
+        <input type="text" name="conteudo11" class="form-control" value="{{request.form['conteudo11']}}">
+        <input type="text" name="conteudo12" class="form-control" value="{{request.form['conteudo12']}}">
+        <input type="text" name="conteudo13" class="form-control" value="{{request.form['conteudo13']}}">
+        <input type="text" name="conteudo14" class="form-control" value="{{request.form['conteudo14']}}">
+        <input type="text" name="conteudo15" class="form-control" value="{{request.form['conteudo15']}}">
+        <input type="text" name="conteudo16" class="form-control" value="{{request.form['conteudo16']}}">
+        <input type="text" name="conteudo17" class="form-control" value="{{request.form['conteudo17']}}">
+        <input type="text" name="conteudo18" class="form-control" value="{{request.form['conteudo18']}}">
+        <input type="text" name="conteudo19" class="form-control" value="{{request.form['conteudo19']}}">
+        <input type="text" name="conteudo20" class="form-control" value="{{request.form['conteudo20']}}">
+    </div>
+
+    <div class="form-group">
+        <label for="fonte">Fonte</label>
+        <input type="text" name="fonte" class="form-control" value="{{request.form['fonte']}}">
+    </div>
+
+    <div class="form-group">
+        <label for="fonte">Link da Fonte</label>
+        <input type="text" name="fontelink" class="form-control" value="{{request.form['fontelink']}}">
+    </div>
+
+    <div class="form-group">
+        <label for="imagem">Imagem</label>
+        <input type="text" name="imagem" class="form-control" value="{{request.form['imagem']}}">
+    </div>
+
+    <div class="form-group">
+        <button class='mt-2 btn btn-primary' type='submit' value='Incluir'>Incluir</button>
+    </div>
+
+	</form>
+
+{% endblock %}

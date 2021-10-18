@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dicas de Economia de Energia
+
+        <a href="{{ url_for('dicas_alteracao', id=dica['id']) }}">
+            <span class="badge badge-warning">
+                Alterar
+            </span>
+        </a>
+
+        </h1>
+
+    </div>
+
+    <div class="row">
+        <img height="250" width="400" src="{{ url_for('static', filename='img/'+dica['imagem']) }}">
+    </div>
+
+    <br>
+
+    <div class="row">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><b>{{dica['titulo']}}</b></h5>
+            <p class="card-text">{{dica['conteudo1']}}</p>
+
+            {% if dica['conteudo2'] != None %}
+                <p class="card-text">{{dica['conteudo2']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo3'] != None %}
+                <p class="card-text">{{dica['conteudo3']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo4'] != None %}
+                <p class="card-text">{{dica['conteudo4']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo5'] != None %}
+                <p class="card-text">{{dica['conteudo5']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo6'] != None %}
+                <p class="card-text">{{dica['conteudo6']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo7'] != None %}
+                <p class="card-text">{{dica['conteudo7']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo8'] != None %}
+                <p class="card-text">{{dica['conteudo8']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo9'] != None %}
+                <p class="card-text">{{dica['conteudo9']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo10'] != None %}
+                <p class="card-text">{{dica['conteudo10']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo11'] != None %}
+                <p class="card-text">{{dica['conteudo11']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo12'] != None %}
+                <p class="card-text">{{dica['conteudo12']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo13'] != None %}
+                <p class="card-text">{{dica['conteudo13']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo14'] != None %}
+                <p class="card-text">{{dica['conteudo14']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo15'] != None %}
+                <p class="card-text">{{dica['conteudo15']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo16'] != None %}
+                <p class="card-text">{{dica['conteudo16']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo17'] != None %}
+                <p class="card-text">{{dica['conteudo17']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo18'] != None %}
+                <p class="card-text">{{dica['conteudo18']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo19'] != None %}
+                <p class="card-text">{{dica['conteudo19']}}</p>
+            {% endif %}
+
+            {% if dica['conteudo20'] != None %}
+                <p class="card-text">{{dica['conteudo20']}}</p>
+            {% endif %}
+
+            {% if dica['fonte'] != '' and dica['fontelink'] != '' %}
+                <p>
+                <a href="{{dica['fontelink']}}">
+                    Fonte: {{dica['fonte']}}
+                </a>
+
+                </p>
+              {% else %}
+                {% if dica['fonte'] != '' %}
+                    <p class="card-text">Fonte: {{dica['fonte']}}</p>
+                {% endif %}
+            {% endif %}
+
+
+          </div>
+        </div>
+
+    </div>
+
+
+    <!--
+    <h2>
+        {% block title %}
+            {{dica['titulo']}}
+        {% endblock%}
+    </h2>
+
+    <span class="badge badge-primary">
+        {{dica['criacao']}}
+    </span>
+
+    <p>
+        {{dica['conteudo']}}
+    </p>
+
+    <hr>
+
+    <p>
+        {{dica['fonte']}}
+    </p>
+
+    <p>
+        {{dica['fontelink']}}
+    </p>
+    -->
+
+{% endblock %}

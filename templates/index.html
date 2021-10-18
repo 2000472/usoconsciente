@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            Dicas de Economia de Energia
+
+        <a href="{{ url_for('dicas_inclusao') }}">
+            <span class="badge badge-success">
+                Incluir Nova Dica
+            </span>
+        </a>
+
+        </h1>
+
+    </div>
+
+    <div class="row">
+
+        {% for dica in dicas %}
+        <div class="card" style="width: 20rem;">
+
+        <img class="card-img-top" src="{{ url_for('static', filename='img/'+dica['imagem']) }}">
+
+          <div class="card-body">
+              <h5 class="card-title"><b>{{dica['titulo']}}</b></h5>
+              <p class="card-text">{{dica['conteudo1'][0:200]}}</p>
+
+              <p class="card-text"><small class="text-muted"><a href="{{url_for('dicas_visualizacao', dica_id=dica['id'])}}">Leia mais &rarr;</a></small></p>
+          </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
